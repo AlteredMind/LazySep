@@ -30,7 +30,3 @@ foreach ($file in $files){
     $worker[0]="sep=,`n $($worker[0])"
     $worker | Out-File -FilePath $TempNewFile
 }
-
-#for-each files  (*.CSV) in folder -> add line on top
-#Get-ChildItem $path -Filter "*.csv" | foreach {$TextToAdd+"`n" + (get-content $_) | Out-File $_;  Move-Item -Path $_ -Destination $NewPath}
-
