@@ -1,21 +1,16 @@
 
+# " ____________________________________________________________________________ " 
+# "|                                                                            |" 
+# "|                                 L A Z Y - S E P                            |" 
+# "|                                                                            |" 
+# "|                                 Version 2022.11                            |" 
+# "|____________________________________________________________________________|" 
+# "|                                                                            |" 
+# "|                                   Created by                               |" 
+# "|                                Matteo Ripamonti                            |" 
+# "|____________________________________________________________________________|" 
+# ""
 
-    Write-Host "`n"
-    Write-Host " ____________________________________________________________________________ " -ForegroundColor Red 
-    Write-Host "|                                                                            |" -ForegroundColor Red 
-    Write-Host "|                                 L A Z Y - S E P                            |" -ForegroundColor Red 
-    Write-Host "|                                                                            |" -ForegroundColor Red
-    Write-Host "|                                 Version 2022.11                            |" -ForegroundColor Red 
-    Write-Host "|____________________________________________________________________________|" -ForegroundColor Red 
-    Write-Host "|                                                                            |" -ForegroundColor Red 
-    Write-Host "|                                   Created by                               |" -ForegroundColor Red 
-    Write-Host "|                                Matteo Ripamonti                            |" -ForegroundColor Red 
-    Write-Host "|____________________________________________________________________________|" -ForegroundColor Red 
-    Write-Host ""
-    Write-Host "`n"
-
-Write-Host "All CSV files will be modified."    
-Write-Host "Please Drag or Add here the full-path folder :"
 
 #Path Mandatory
 param( [Parameter(Mandatory=$true)] $path)
