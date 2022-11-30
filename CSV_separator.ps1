@@ -16,14 +16,17 @@
 param( [Parameter(Mandatory=$true)] $path)
     "directory: " + $path
 
+
 #Environment variables
 $DirectoryToCreate = "modified"
 $Separator = 'Sep=,'
 $export = $path+"\"+$DirectoryToCreate
 
-if (-not (Test-Path -LiteralPath $DirectoryToCreate)) {
+# if (-not (Test-Path -LiteralPath $DirectoryToCreate)) {
+if (-not (Test-Path -LiteralPath $export)) {
     try {
-        New-Item -Path $DirectoryToCreate -ItemType Directory -ErrorAction Stop | Out-Null #-Force
+        #New-Item -Path $DirectoryToCreate -ItemType Directory -ErrorAction Stop | Out-Null #-Force
+        New-Item -Path $export -ItemType Directory -ErrorAction Stop | Out-Null #-Force
     }
     catch {
         Write-Error -Message "Unable to create directory '$DirectoryToCreate'. Error was: $_" -ErrorAction Stop
