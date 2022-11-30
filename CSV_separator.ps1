@@ -40,7 +40,8 @@ else {
 $files = Get-ChildItem -Path $path -Filter "*.csv"
 foreach ($file in $files){
     $TempNewFile = $export + "\" + $file
-    $worker = Get-Content $file
+    $absolute = $path + "\" + $file
+    $worker = Get-Content $absolute
     $worker[0]="sep=,`n $($worker[0])"
     $worker | Out-File -FilePath $TempNewFile
 }
